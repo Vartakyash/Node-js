@@ -1,0 +1,13 @@
+/* 1.TOOLTIP CODE */
+/* 
+:root {
+    --bd-violet-bg: purple;
+    --bs-white: white;
+  }
+  
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-violet-bg);
+    --bs-tooltip-color: var(--bs-white);
+  }
+   */
+   
