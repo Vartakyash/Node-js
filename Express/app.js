@@ -1,5 +1,11 @@
 //npm init to be used after cd Express
 //npm install express after cd Express
+//npm init to be used after cd Express
+//npm install express after cd Express
+// npm i nodemon after cd Express
+//npm install -g nodemon
+//Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+//nodemon .\app.js
 
 const express = require('express')
 
