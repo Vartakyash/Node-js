@@ -1,4 +1,5 @@
-//npm init to be used  after cd Express
+//npm init to be used after cd Express
+//npm install express after cd Express
 
 const express = require('express')
 
