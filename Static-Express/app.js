@@ -1,3 +1,7 @@
+//npm init to be used after cd Static-Express
+//npm install express after cd Static-Express
+// npm i nodemon after cd Static-Express
+
 const express = require('express');
 const path = require("path");
 const app = express();
