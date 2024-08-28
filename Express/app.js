@@ -1,16 +1,15 @@
 //npm init to be used after cd Express
 //npm install express after cd Express
-//npm init to be used after cd Express
-//npm install express after cd Express
 // npm i nodemon after cd Express
 //npm install -g nodemon
 //Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 //nodemon .\app.js
 
+
 const express = require('express')
 
 const app = express();
-port = 3000;
+port = 80;
 
 app.get(('/'),(req,res)=>{
     res.send('Home Page')
@@ -21,10 +20,10 @@ app.get(('/about'),(req,res)=>{
 })
 
 app.get(('/contact'),(req,res)=>{
-    res.status(404).send('Contact Page')
+    res.status(404).send('Contact Page yashvartak')
 })
 
-app.get(('/contact'),(req,res)=>{
+app.post(('/contact'),(req,res)=>{
     res.status(404).send('Contact Page PostApi')
 })
 
