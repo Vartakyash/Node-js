@@ -1,0 +1,11 @@
+
+Name: jhf
+Login Id: Pratham
+Password: khgmjt
+Age: 20
+Date of Birth: 2024-08-14
+Course: Data Science
+Hobbies: Swimming 
+Gender: Male 
+Email: llemgk@bgrd.com
+Address: fjmfgnf

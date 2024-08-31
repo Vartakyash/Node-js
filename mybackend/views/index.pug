@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>#{title}</title>
+  <!-- Make sure index.pug is selected as html file in terminal section -->
+  <link rel="stylesheet" href="../static/style.css" />
+</head>
+
+<body>
+  <fieldset>
+    <legend>Form</legend>
+    <form action="/" method="post">
+      <p>Login Id:-
+        <br /><input type="text" name="Login" id="Login" placeholder="Enter your Login Id" /></p>
+      <p>Password:-<br /><input type="password" name="Password" id="Password" placeholder="Enter your Password" /></p>
+      <p>Name:-<br /><input type="text" name="name" id="name" placeholder="Enter your name" /></p>
+      <p>Age:-<br /><input type="number" name="age" id="age" placeholder="Enter your age" /></p>
+      <p>DOB:-<br /><input type="date" name="dob" id="dob" placeholder="Enter your dob" /></p>
+      <p>Course:-<br />
+        <select name="course" id="course">
+          <option value="">-------select-------</option>
+          <option value="Graphic Design">Graphic Design</option>
+          <option value="Data Science">Data Science</option>
+          <option value="Quant Analyst">Quant Analyst</option> 
+        </select>
+      </p>
+      <p>Hobbies:-<br />
+        <input type="checkbox" name="check1" id="check1" /> Swimming
+        <input type="checkbox" name="check2" id="check2" /> Gaming
+      </p>
+      <p>Gender:-<br />
+        <input type="radio" name="g1" id="g1" /> Male
+        <input type="radio" name="g2" id="g2" /> Female
+      </p>
+      <p>Email:-<br />
+        <input type="text" name="email" id="email" />
+      </p>
+      <p>Address:-<br />
+        <textarea name="adr" id="adr" rows="8" cols="80"></textarea>
+      </p>
+      <button>Submit</button>
+    </form>
+  </fieldset>
+</body>
+
+</html>
