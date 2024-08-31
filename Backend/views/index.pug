@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>#{title}</title>
     style 
-        include../static/style.css  
+        include../static/style.css
 </head>
 <body>
     <nav>
@@ -22,7 +24,13 @@
     <p> 
 
     |#{content} <!-- This is plain HTML using PUG. -->
-        
+    
+     <form action="/" method="post" id="contact">
+        <input type="text" name="name" id="name" placeholder="Enter your name"/><br><br>
+        <input type="text" name="age" id="age" placeholder="Enter your age"/><br><br>
+        <textarea name="adr" id="adr" cols="30" rows="10" placeholder="Enter your adress"></textarea><br><br>
+        <button class="btn">Submit</button>
+     </form> 
     </p>
 
 </body>
