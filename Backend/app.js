@@ -7,22 +7,45 @@
 //npm install pug --save
 
 const express = require('express');
-const path = require("path");
-const app = express();
-port = 5000;
+const path = require('path');
+const fs = require('fs');
 
-//For serving static Files
-app.use('/static',express.static('static'))
+const app = express(); // Corrected syntax for app initialization
+port = 80; 
 
-app.set('view engine','pug');// set the template engine as pug
+// EXPRESS SPECIFIC STUFF
+app.use('/static', express.static('static')); // For serving static files
+app.use(express.urlencoded()); 
 
-app.set('views',path.join(__dirname,'views'));// set the view directory
+// PUG SPECIFIC STUFF
+app.set('view engine', 'pug'); // Set the template engine as pug
+app.set('views', path.join(__dirname, 'views')); 
 
-//our pug demo endpoint
-app.get('/demo',(req,res)=>{
-    res.status(200).render('demo', {title: 'First Pug Page',message:'Pug Page',mq:'Breaking News',msg:'hello'})
-})
+// ENDPOINTS
+app.get('/', (req, res) => {
+    const con = "This is a Basic pug template for node.js";
+    const params = { 'title': 'PuG template', "content": con };
+    res.status(200).render('index.pug', params); 
+});
 
-app.listen(port,()=>{
-    console.log(`Server is running on port ${port}`)
-})
+app.post('/', (req, res) => {
+    //console.log(req.body)
+    const name = req.body.name; // Fixed syntax for assignment
+    const age = req.body.age;
+    const adr = req.body.adr;
+
+    let outputWrite = `Name: ${name}, Age: ${age}, Address: ${adr}`; // Fixed template literals and syntax
+
+    fs.writeFileSync('output.txt', outputwrite);
+    console.log(req.body);
+
+    const params = { 'message': 'Your Form has been submitted successfully' };
+    res.status(200).render('index.pug', params); // Removed .pug extension in render
+
+    console.log(params()); // Fixed console.log usage
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
