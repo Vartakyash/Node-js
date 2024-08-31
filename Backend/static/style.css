@@ -1,6 +1,17 @@
 *{
     font-family: 'Times New Roman', Times,serif';
 }
-h1{
-    color: red;
+nav{
+    background-color: gray;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+li{
+    list-style: none;
+    padding: 3px 4px;
+}
+a{
+    text-decoration: none;
 }
