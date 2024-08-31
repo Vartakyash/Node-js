@@ -5,11 +5,11 @@
 //Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 //nodemon app.js
 //npm install pug --save
-
+//use localhost/demo in browser to see pug template
 const express = require('express');
 const path = require("path");
 const app = express();
-port = 5000;
+port = 80;
 
 //For serving static Files
 app.use('/static',express.static('static'))
@@ -22,6 +22,11 @@ app.set('views',path.join(__dirname,'views'));// set the view directory
 app.get('/demo',(req,res)=>{
     res.status(200).render('demo', {title: 'First Pug Page',message:'Pug Page',mq:'Breaking News',msg:'hello'})
 })
+
+// Route for root path (/)
+app.get('/', (req, res) => {
+    res.status(200).send('Welcome to the home page!');
+});
 
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`)
