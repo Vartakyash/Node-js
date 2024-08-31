@@ -7,7 +7,7 @@
 //npm install pug --save
 
 const express = require('express');
-const path = require('path');
+const path = require("path");
 const fs = require('fs');
 
 const app = express(); // Corrected syntax for app initialization
@@ -34,7 +34,7 @@ app.post('/', (req, res) => {
     const age = req.body.age;
     const adr = req.body.adr;
 
-    let outputWrite = `Name: ${name}, Age: ${age}, Address: ${adr}`; // Fixed template literals and syntax
+    let outputwrite = `Name: ${name}, Age: ${age}, Address: ${adr}`; // Fixed template literals and syntax
 
     fs.writeFileSync('output.txt', outputwrite);
     console.log(req.body);
@@ -42,7 +42,7 @@ app.post('/', (req, res) => {
     const params = { 'message': 'Your Form has been submitted successfully' };
     res.status(200).render('index.pug', params); // Removed .pug extension in render
 
-    console.log(params()); // Fixed console.log usage
+    console.log(params.message); // Fixed console.log usag
 });
 
 // Start the server
