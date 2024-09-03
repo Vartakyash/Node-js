@@ -9,7 +9,9 @@ const UserSchema = new mongoose.Schema({
     name: String,
     age: Number
 })
-
+//open mongodb compass connect to mongodb://localhost:27017 
+//create users folder under crud database
+//click on add data 
 //paste in insert document
 // /** 
 // * Paste one or more documents here
