@@ -15,14 +15,14 @@ const UserSchema = new mongoose.Schema({
 //paste in insert document
 // /** 
 // * Paste one or more documents here
-// */
-// {
-//     "_id": {
-//       "$oid": "66d62ead89e1eb74a23f63a4"
-//     },
-//     "name":morgan,
-//     "age":45
-//   }
+*/
+{
+    "_id": {
+      "$oid": "66d62ead89e1eb74a23f63a4"
+    },
+    "name":"morgan",
+    "age":45
+  }
 
 const UserModel = mongoose.model("users",UserSchema)
 
